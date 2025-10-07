@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-const User = ({ user }) => {
-  const { name, email, phone } = user;
+const Post = ({ post }) => {
   const userStyle = {
     border: "1px solid gray",
     margin: "10px",
@@ -12,12 +11,10 @@ const User = ({ user }) => {
   };
   return (
     <div style={userStyle}>
-      <h2>{name}</h2>
-      <p>Email: {email}</p>
-      <p>Phone: {phone}</p>
-      <Link to={`/users/${user.id}`}>View Details</Link>
+      <h4>{post.title}</h4>
+      <Link to={`/posts/${post.id}`}>View Details</Link>
     </div>
   );
 };
 
-export default User;
+export default Post;
